@@ -1,0 +1,17 @@
+package com.app.rabbit.messaging.resource;
+
+public class Controller {
+	
+	
+	private Sender sender;
+
+	@Autowired
+	public Controller(Sender sender){
+		this.sender = sender;
+	}
+
+	@RequestMapping(path = "/register", method = RequestMethod.POST)
+	public Customer register(@RequestBody Customer customer) {
+		return customerService.register(customer);
+	}
+}

@@ -1,0 +1,5 @@
+package com.app.rabbit.messaging.controller;
+
+public class Controller {
+
+}

@@ -1,0 +1,19 @@
+package com.app.rabbit.messaging.resource;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class Controller {
+	
+	
+	private Sender sender;
+
+	@Autowired
+	public Controller(Sender sender){
+		this.sender = sender;
+	}
+
+	@GetMapping
+	public Customer register(@RequestBody Customer customer) {
+		return customerService.register(customer);
+	}
+}

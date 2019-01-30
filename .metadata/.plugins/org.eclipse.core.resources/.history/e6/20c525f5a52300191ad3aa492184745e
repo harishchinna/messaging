@@ -1,0 +1,5 @@
+package com.app.rabbit.messaging.receiver;
+
+public class Receiver {
+
+}

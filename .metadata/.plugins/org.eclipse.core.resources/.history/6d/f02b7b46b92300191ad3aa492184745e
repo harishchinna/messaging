@@ -1,0 +1,10 @@
+package com.app.rabbit.messaging.controller;
+
+import org.springframework.amqp.rabbit.core.RabbitMessagingTemplate;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+
+	private RabbitMessagingTemplate template;
+}

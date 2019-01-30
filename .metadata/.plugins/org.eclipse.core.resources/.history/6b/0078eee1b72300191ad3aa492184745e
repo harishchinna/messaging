@@ -1,0 +1,23 @@
+package com.app.rabbit.messaging.resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.app.rabbit.messaging.sender.Sender;
+
+public class Controller {
+	
+	
+	private Sender sender;
+
+	@Autowired
+	public Controller(Sender sender){
+		this.sender = sender;
+	}
+
+	@GetMapping
+	public Sender register(@RequestBody Sender sender) {
+		return sender.send(sender);
+	}
+}

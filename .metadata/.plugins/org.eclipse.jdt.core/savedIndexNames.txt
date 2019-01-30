@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\messaging\.metadata\.plugins\org.eclipse.jdt.core
+3678107089.index
+1220452479.index

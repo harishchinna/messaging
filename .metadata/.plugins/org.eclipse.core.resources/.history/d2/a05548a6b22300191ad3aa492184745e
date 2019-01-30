@@ -1,0 +1,23 @@
+package com.app.rabbit.messaging.receiver;
+
+import org.springframework.amqp.rabbit.core.RabbitMessagingTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Component
+public class Receiver {
+	
+	@Autowired
+	private RabbitMessagingTemplate template;
+	
+	public void CustomerController(RabbitMessagingTemplate template){
+		this.template = template;
+	}
+	
+	@GetMapping
+	public void send(String message)
+	{
+		template.convertAndSend("hello");
+	}
+}
